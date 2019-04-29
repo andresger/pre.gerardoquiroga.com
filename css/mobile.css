@@ -1,0 +1,32 @@
+body, .bgroll{
+	background-color: #ff7652;
+	animation: mobanim 16s ease 0s infinite;
+	transition: background-color 1s ease 0s;
+}
+
+@keyframes mobanim {
+	0% {
+		background-color: #ff6f4a;
+	}
+	0% {
+		background-color: #ff6f4a;
+	}
+	25% {
+		background-color: #ffb740;
+	}
+	44% {
+		background-color: #ffb740;
+	}
+	50% {
+		background-color: #32d5e8;
+	}
+	69% {
+		background-color: #32d5e8;
+	}
+	75% {
+		background-color: #94ffcb;
+	}
+	94% {
+		background-color: #94ffcb;
+	}
+}

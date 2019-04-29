@@ -1,0 +1,125 @@
+@font-face {
+	font-display: auto;
+}
+.preload-wrapper {
+	position: absolute;
+	background-color: #ff6f4a;
+	width: 100vw;
+	height: 100vh;
+	z-index: 1001;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: background-color 1s ease-in-out 0s;
+}
+
+.me{
+	position: relative;
+	width: 15vw;
+	height: 15vw;
+	min-width: 130px;
+	min-height: 130px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	border-radius: 50%;
+	border: 10px solid #002437;
+	background-color: rgba(255, 255, 255, .15);
+}
+
+.me:focus {
+	outline: 2px dashed blue;
+}
+
+.me::selection, .me img::selection {
+	background-color: transparent;
+}
+
+.me img{
+	max-width: 100%;
+}
+
+.me.pre {
+	position: absolute;
+	width: 140px;
+	height: 140px;
+	min-width: 140px;
+	min-height: 140px;
+	margin-top: 0;
+	border: 5px solid #002437;
+	opacity: .8;
+}
+
+@keyframes lds-eclipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+  100% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+  }
+}
+@-webkit-keyframes lds-eclipse {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  50% {
+    -webkit-transform: rotate(720deg);
+    transform: rotate(720deg);
+  }
+  100% {
+    -webkit-transform: rotate(1440deg);
+    transform: rotate(1440deg);
+  }
+}
+.lds-eclipse {
+  position: relative;
+}
+.lds-eclipse div {
+  position: absolute;
+  -webkit-animation: lds-eclipse 1.7s ease infinite;
+  animation: lds-eclipse 1.7s ease infinite;
+  width: 160px;
+  height: 160px;
+  top: 20px;
+  left: 20px;
+  border-radius: 50%;
+  box-shadow: 0 4px 0 0 #fff;
+  -webkit-transform-origin: 80px 82px;
+  transform-origin: 80px 82px;
+  opacity: .6;
+}
+.lds-eclipse {
+  width: 200px !important;
+  height: 200px !important;
+  -webkit-transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+  transform: translate(-100px, -100px) scale(1) translate(100px, 100px);
+}
+
+.lds-css {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+ @media only screen and (max-width: 500px) {
+ 	.lds-eclipse div {
+ 	  width: 120px;
+ 	  height: 120px;
+ 	  -webkit-transform-origin: 60px 62px;
+ 	  transform-origin: 60px 62px;
+ 	}
+ 	.lds-eclipse {
+ 	  width: 160px !important;
+ 	  height: 160px !important;
+ 	  -webkit-transform: translate(-80px, -80px) scale(1) translate(80px, 80px);
+ 	  transform: translate(-80px, -80px) scale(1) translate(80px, 80px);
+ 	}
+ }
