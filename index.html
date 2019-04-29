@@ -50,7 +50,7 @@
 	<link rel="preconnect" href="https://s3.amazonaws.com">
 	<link rel="preconnect" href="https://cdnjs.cloudflare.com">
 	<link rel="preconnect" href="https://static.hotjar.com">
-	
+
     <link rel="stylesheet prefetch" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
     <link rel="stylesheet prefetch" href="css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css?family=Ubuntu:300,400,500" rel="stylesheet" as="font" crossorigin="crossorigin">
@@ -81,7 +81,11 @@
 					<div></div>
 				</div>
 				<div id="yopre" class="me pre">
-					<img src="img/me.webp" alt="Gerardo Quiroga">
+					<picture>
+					    <source srcset="img/me.webp" type="image/webp">
+					    <source srcset="img/me.png" type="image/png">
+					    <img src="img/me.png" alt="Gerardo Quiroga">
+					</picture>
 				</div>
 			</div>
 		</div>
@@ -89,7 +93,11 @@
 
 	<div class="postload-wrapper bgroll fhide">
 		<div id="yopost" class="me post">
-			<img src="img/me.webp" alt="Gerardo Quiroga">
+			<picture>
+					<source srcset="img/me.webp" type="image/webp">
+					<source srcset="img/me.png" type="image/png">
+					<img src="img/me.png" alt="Gerardo Quiroga">
+			</picture>
 		</div>
 	</div>
 
@@ -100,7 +108,11 @@
 			<div class="row">
 				<div class="col-md-12">
 					<div id="yo" class="me">
-						<img src="img/me.webp" alt="Gerardo Quiroga">
+						<picture>
+						    <source srcset="img/me.webp" type="image/webp">
+						    <source srcset="img/me.png" type="image/png">
+						    <img src="img/me.png" alt="Gerardo Quiroga">
+						</picture>
 						<div id="clickme" class="speech-bubble">Click me!</div>
 					</div>
 					<div class="name">Gerardo<span class="space">&nbsp;</span><span>Quiroga</span></div>
@@ -110,6 +122,7 @@
 						<a href="https://gerardoquiroga.com/cv/" target="_blank" rel="noopener" onClick="ga('send', 'event', 'links', 'click', 'cv');"><i class="social-btn glyphicon glyphicon-briefcase" data-tippy-content="Curriculum Vitae" alt="Curriculum Vitae"></i></a>
 						<a href="https://www.linkedin.com/in/andresger/" target="_blank" rel="noopener" onClick="ga('send', 'event', 'links', 'click', 'linkedin');"><i class="social-btn socicon-linkedin" data-tippy-content="Linkedin" alt="Linkedin"></i></a>
 						<a href="https://be.net/gerardo-quiroga" target="_blank" rel="noopener" onClick="ga('send', 'event', 'links', 'click', 'behance');"><i class="social-btn socicon-behance" data-tippy-content="Behance" alt="Behance"></i></a>
+						<a href="https://github.com/andresger" target="_blank" rel="noopener" onClick="ga('send', 'event', 'links', 'click', 'github');"><i class="social-btn socicon-github" data-tippy-content="Github" alt="Github"></i></a>
 						<!-- <a href="https://dribbble.com/andresger" target="_blank" rel="noopener" onClick="ga('send', 'event', 'links', 'click', 'dribbble');"><i class="social-btn socicon-dribbble" data-tippy-content="Dribbble" alt="Dribbble"></i></a> -->
 						<!-- <a href="https://medium.com/@andresger" target="_blank" rel="noopener" onClick="ga('send', 'event', 'links', 'click', 'medium');"><i class="social-btn socicon-medium" data-tippy-content="Medium" alt="Medium"></i></a> -->
 						<!-- <a href="https://codepen.io/gerardo-quiroga/" target="_blank" rel="noopener" onClick="ga('send', 'event', 'links', 'click', 'codepen');"><i class="social-btn socicon-codepen" data-tippy-content="Codepen" alt="Codepen"></i></a> -->
@@ -154,7 +167,7 @@
 
 
 
-	
+
 
 <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="js/popper.min.js" defer></script>
@@ -195,15 +208,15 @@
 		});
 
 	    //$.getScript( 'https://cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js', colr());
-	    
+
 		//$('<script id="anm" src="https:\/\/cdnjs.cloudflare.com/ajax/libs/animejs/1.0.0/anime.min.js" ><\/script>').insertAfter("#scrpt");
 		//$('<script src="js/color.js" ><\/script>').insertAfter("#scrpt");
 		//$('<script src="js/test.js" defer><\/script>').insertAfter("#scrpt");
 		$.fn.customerPopup = function (e, intWidth, intHeight, blnResize) {
-    
+
 	    // Prevent default anchor event
 	    e.preventDefault();
-	    
+
 	    // Set values for window
 	    intWidth = intWidth || '600';
 	    intHeight = intHeight || '600';
@@ -211,7 +224,7 @@
 
 	    // Set title and open popup with focus on it
 	    var strTitle = ((typeof this.attr('title') !== 'undefined') ? this.attr('title') : 'Social Share'),
-	        strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,            
+	        strParam = 'width=' + intWidth + ',height=' + intHeight + ',resizable=' + strResize,
 	        objWindow = window.open(this.attr('href'), strTitle, strParam).focus();
 	  }
 	}
@@ -257,7 +270,7 @@
 		    $('button').not('[data-target="#'+att+'"]').removeClass('active');
 		    $('button[data-target="#'+att+'"]').parent().children('.caret').fadeIn('fast');
 		    $('button').not('[data-target="#'+att+'"]').parent().children('.caret').fadeOut('fast');
-		    function scrollto() { 
+		    function scrollto() {
 		    	var position = $(".btn-6").offset().top;
 		    	$("HTML, BODY").animate({ scrollTop: position }, 500);
 		    };
